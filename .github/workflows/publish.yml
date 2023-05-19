@@ -13,7 +13,7 @@ jobs:
        registry: ghcr.io
        username: ${{ github.actor }}
        password: ${{ secrets.GITHUBTOKEN }}
-    - name: Build the hello-docker Docker image
+    - name: Build the hello-docker Docker image then push
       run: |
        docker build . --tag ghcr.io/kenken64/hello-docker-gcr-demo:latest
        docker run ghcr.io/kenken64/hello-docker-gcr-demo:latest
